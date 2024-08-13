@@ -238,8 +238,8 @@ function AcademicTranscripts() {
                 </thead>
                 <tbody>
                   {data.length > 0 ? (
-                    data.map((e) => (
-                      <tr>
+                    data.map((e, index) => (
+                      <tr key={index}>
                         <th scope="row">{e?.course}</th>
                         <td>{e.classWorkPercentage || "-"}</td>
                         <td>{e?.examPercentage || "-"}</td>

@@ -87,7 +87,7 @@ const TheHeaderDropdownMssg = () => {
                                 <div className="message d-flex">
                                     <div className="pt-3 mr-3 float-left">
                                         <div className="c-avatar">
-                                            <Avatar />
+                                            <Avatar x="true" />
                                             <span className="c-avatar-status bg-danger"></span>
                                         </div>
                                     </div>

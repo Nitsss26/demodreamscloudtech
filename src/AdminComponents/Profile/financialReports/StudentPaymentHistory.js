@@ -7,7 +7,7 @@ import { selectClasses } from "../../../store/slices/schoolSlice";
 import InsertDriveFileIcon from "@material-ui/icons/InsertDriveFile";
 import PrintIcon from "@material-ui/icons/Print";
 import ExcelButton from "../../../components/tables/ExcelExport";
-import { selectUser } from "../../../store/slices/userSlice";
+// import { selectUser } from "../../../store/slices/userSlice";
 import { Avatar } from "@material-ui/core";
 
 const tableHeader = [
@@ -29,7 +29,7 @@ function ViewPayment() {
   const [student, setstudent] = useState("");
   const [studentData, setstudentData] = useState("");
 
-  const user = useSelector(selectUser);
+  // const user = useSelector(selectUser);
 
   const handleSearchClass = (e) => {
     setclassID(e);

@@ -104,12 +104,12 @@ export default function CustomPaginationActionsTable({
               <>
                 {(rowsPerPage > 0
                   ? data?.slice(
-                      page * rowsPerPage,
-                      page * rowsPerPage + rowsPerPage
-                    )
+                    page * rowsPerPage,
+                    page * rowsPerPage + rowsPerPage
+                  )
                   : data
-                )?.map((row) => (
-                  <TableRow>
+                )?.map((row, index) => (
+                  <TableRow key={index}>
                     <TableCell align="left">
                       {moment(row?.date)?.format("D MMMM YYYY")}
                     </TableCell>

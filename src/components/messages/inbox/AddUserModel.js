@@ -117,8 +117,8 @@ export default function CustomizedDialogs({
           <div className="mt-3 d-flex results__container justify-content-between align-items-start">
             <ul>
               {searchResults &&
-                searchResults.map((e) => (
-                  <li>
+                searchResults.map((e, index) => (
+                  <li key={index}>
                     <button
                       onClick={() => handleSendRequest(e?.userID)}
                       className="btn"

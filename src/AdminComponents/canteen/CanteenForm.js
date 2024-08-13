@@ -34,8 +34,8 @@ function CanteenForm(props) {
       {planPrice && (
         <div className="col-md-10">
           <label className="form-label">Amount Paid</label>
-          {[1, 2, 3].map((e) => (
-            <div className="form-check">
+          {[1, 2, 3].map((e, index) => (
+            <div key={index} className="form-check">
               <input
                 className="form-check-input"
                 value={planPrice * e}

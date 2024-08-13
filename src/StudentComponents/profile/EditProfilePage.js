@@ -172,13 +172,15 @@ function EditProfilePage() {
         <Guadian guadian={guadian} setguadian={setguadian} />
         <div className="row">
           {guadian &&
-            guadian.map((e) => (
-              <div className="col-xs-12 col-sm-6">
-                <GuadianCard
-                  guadian={e}
-                  key={e.id}
-                  handleDeleteGuadian={handleDeleteGuadian}
-                />
+            guadian.map((e, index) => (
+              <div key={index}>
+                <div className="col-xs-12 col-sm-6">
+                  <GuadianCard
+                    guadian={e}
+                    key={e.id}
+                    handleDeleteGuadian={handleDeleteGuadian}
+                  />
+                </div>
               </div>
             ))}
         </div>

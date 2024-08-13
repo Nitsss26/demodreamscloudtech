@@ -3,10 +3,10 @@ import PeopleAltIcon from "@material-ui/icons/PeopleAlt";
 import SchoolOutlinedIcon from '@material-ui/icons/SchoolOutlined';
 
 import Card from "../../components/dashboard/Card";
-import ClassIcon from "@material-ui/icons/Class";
-import HomeWorkIcon from "@material-ui/icons/HomeWork";
+// import ClassIcon from "@material-ui/icons/Class";
+// import HomeWorkIcon from "@material-ui/icons/HomeWork";
 import ImportContactsIcon from "@material-ui/icons/ImportContacts";
-import BrandingWatermarkIcon from "@material-ui/icons/BrandingWatermark";
+// import BrandingWatermarkIcon from "@material-ui/icons/BrandingWatermark";
 import InsertChartOutlinedIcon from '@material-ui/icons/InsertChartOutlined';
 
 function Cards({ counts }) {

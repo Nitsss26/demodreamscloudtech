@@ -267,7 +267,7 @@ function NewStudent() {
           <div className="row">
             {guadian &&
               guadian.map((e, i) => (
-                <div className="col-xs-12 col-sm-6">
+                <div key={i} className="col-xs-12 col-sm-6">
                   <GuadianCard
                     guadian={e}
                     key={i}
