@@ -7,7 +7,7 @@ import "./polyfill";
 import React from "react";
 import ReactDOM from "react-dom/client"; // Updated import for React 18
 import App from "./App";
-import * as serviceWorker from "./serviceWorker";
+import * as serviceWorker from "../public/serviceWorker";
 import { icons } from "./assets/icons";
 import { Provider } from "react-redux";
 import { initFunc } from "./store/apiCall";

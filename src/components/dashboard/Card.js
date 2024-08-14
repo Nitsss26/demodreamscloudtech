@@ -28,10 +28,10 @@ function Card({ icon, title, value, link, isPercentage, text, message }) {
           <h5>{title}</h5>
           <div className="card__digits">
             <strong>
-              {text ? value : <CountUp end={value}></CountUp>}
-
+              {text ? value : value !== undefined ? <CountUp end={value} /> : "0"}
               {isPercentage && "%"}
             </strong>
+
           </div>
           <small>{message ? message : "Registered"}</small>
         </div>

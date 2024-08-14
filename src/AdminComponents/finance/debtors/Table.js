@@ -79,9 +79,9 @@ export default function CustomPaginationActionsTable({
               <>
                 {(rowsPerPage > 0
                   ? data.slice(
-                      page * rowsPerPage,
-                      page * rowsPerPage + rowsPerPage
-                    )
+                    page * rowsPerPage,
+                    page * rowsPerPage + rowsPerPage
+                  )
                   : data
                 ).map((row) => (
                   <TableRow key={row.userID}>
@@ -145,8 +145,8 @@ export default function CustomPaginationActionsTable({
                 inputProps: { "aria-label": "rows per page" },
                 native: true,
               }}
-              onChangePage={handleChangePage}
-              onChangeRowsPerPage={handleChangeRowsPerPage}
+              onPageChange={handleChangePage}
+              onRowsPerPageChange={handleChangeRowsPerPage}
               ActionsComponent={TablePaginationActions}
             />
           </TableRow>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles} from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableHead from '@material-ui/core/TableHead'
@@ -12,7 +12,7 @@ import Paper from '@material-ui/core/Paper';
 import IconButton from '@material-ui/core/IconButton';
 import EditIcon from '@material-ui/icons/Edit';
 import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import TablePaginationActions from './TablePigination'
 
 
@@ -22,7 +22,7 @@ const useStyles2 = makeStyles({
   },
 });
 
-export default function CustomPaginationActionsTable({scholarships}) {
+export default function CustomPaginationActionsTable({ scholarships }) {
   const classes = useStyles2();
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
@@ -41,7 +41,7 @@ export default function CustomPaginationActionsTable({scholarships}) {
   return (
     <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="custom pagination table">
-      <TableHead>
+        <TableHead>
           <TableRow>
             <TableCell>ID</TableCell>
             <TableCell align="left">Scholarship</TableCell>
@@ -53,11 +53,11 @@ export default function CustomPaginationActionsTable({scholarships}) {
         </TableHead>
         <TableBody>
           {(rowsPerPage > 0
-            ?  scholarships.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+            ? scholarships.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
             : scholarships
           ).map((row) => (
             <TableRow key={row.id}>
-              <TableCell component="th"  scope="row">
+              <TableCell component="th" scope="row">
                 {row.id}
               </TableCell>
               <TableCell align="left">
@@ -69,16 +69,16 @@ export default function CustomPaginationActionsTable({scholarships}) {
               <TableCell align="left">
                 {3}
               </TableCell>
-              <TableCell  align="left">
+              <TableCell align="left">
                 {row.added}
               </TableCell>
-              <TableCell  align="left">
-                  <IconButton>
-                      <DeleteOutlineIcon/>
-                  </IconButton>
-                  <Link to="/campuses/edit">
-                     <EditIcon></EditIcon>
-                  </Link>
+              <TableCell align="left">
+                <IconButton>
+                  <DeleteOutlineIcon />
+                </IconButton>
+                <Link to="/campuses/edit">
+                  <EditIcon></EditIcon>
+                </Link>
               </TableCell>
             </TableRow>
           ))}
@@ -100,8 +100,8 @@ export default function CustomPaginationActionsTable({scholarships}) {
                 inputProps: { 'aria-label': 'rows per page' },
                 native: true,
               }}
-              onChangePage={handleChangePage}
-              onChangeRowsPerPage={handleChangeRowsPerPage}
+              onPageChange={handleChangePage}
+              onRowsPerPageChange={handleChangeRowsPerPage}
               ActionsComponent={TablePaginationActions}
             />
           </TableRow>

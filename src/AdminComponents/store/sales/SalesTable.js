@@ -59,9 +59,9 @@ export default function CustomPaginationActionsTable({ data }) {
             <>
               {(rowsPerPage > 0
                 ? data?.slice(
-                    page * rowsPerPage,
-                    page * rowsPerPage + rowsPerPage
-                  )
+                  page * rowsPerPage,
+                  page * rowsPerPage + rowsPerPage
+                )
                 : data
               )?.map((row) => (
                 <TableRow key={row._id}>
@@ -93,8 +93,8 @@ export default function CustomPaginationActionsTable({ data }) {
                   inputProps: { "aria-label": "rows per page" },
                   native: true,
                 }}
-                onChangePage={handleChangePage}
-                onChangeRowsPerPage={handleChangeRowsPerPage}
+                onPageChange={handleChangePage}
+                onRowsPerPageChange={handleChangeRowsPerPage}
                 ActionsComponent={TablePaginationActions}
               />
             )}

@@ -35,7 +35,7 @@ const TheHeaderDropdown = () => {
                         width: 35,  // Adjust width as needed
                         height: 35, // Adjust height as needed
                         borderRadius: 5 // Set borderRadius to 0 for square shape
-                    }} x />
+                    }} />
                     <h5>
                         {" "}
                         <strong>

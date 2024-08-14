@@ -115,7 +115,8 @@ const TheHeaderDropdownNotif = () => {
             <CDropdownToggle className="c-header-nav-link" caret={false}>
                 <CIcon name="cil-bell" style={{ color: "#42d29d" }} size="lg" />
                 {itemsCount > 0 && (
-                    <CBadge shape="pill" color="danger">
+                    // <CBadge shape="pill" color="danger">
+                    <CBadge >
                         {itemsCount}
                     </CBadge>
                 )}

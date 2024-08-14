@@ -3,7 +3,7 @@ import {
     Route,
     Switch
 } from 'react-router-dom'
-import { CContainer, CFade } from '@coreui/react'
+// import { CContainer, CFade } from '@coreui/react'
 
 // routes config
 //import routes from '../routes'
@@ -17,7 +17,8 @@ const loading = (
 const TheContent = ({ routes, path }) => {
     return (
         <main className="c-main">
-            <CContainer fluid>
+            {/* <CContainer fluid> */}
+            <div>
                 <Suspense fallback={loading}>
                     <Switch>
                         {routes.map((route, idx) => {
@@ -28,16 +29,19 @@ const TheContent = ({ routes, path }) => {
                                     exact={route.exact}
                                     name={route.name}
                                     render={props => (
-                                        <CFade>
+                                        // <CFade>
+                                        <div>
                                             <route.component {...props} />
-                                        </CFade>
+                                        </div>
+                                        // </CFade>
                                     )}
                                 />
                             )
                         })}
                     </Switch>
                 </Suspense>
-            </CContainer>
+                {/* </CContainer> */}
+            </div>
         </main>
     )
 }

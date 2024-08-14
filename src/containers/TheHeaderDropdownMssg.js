@@ -66,7 +66,8 @@ const TheHeaderDropdownMssg = () => {
             <CDropdownToggle className="c-header-nav-link" caret={false}>
                 <CIcon name="cil-envelope-open" style={{ color: "#f44336" }} size="lg" />
                 {itemsCount > 0 && (
-                    <CBadge shape="pill" color="info">
+                    // <CBadge shape="pill" color="info">
+                    <CBadge >
                         {itemsCount}
                     </CBadge>
                 )}
@@ -87,7 +88,8 @@ const TheHeaderDropdownMssg = () => {
                                 <div className="message d-flex">
                                     <div className="pt-3 mr-3 float-left">
                                         <div className="c-avatar">
-                                            <Avatar x="true" />
+                                            {/* <Avatar x="true" /> */}
+                                            <Avatar />
                                             <span className="c-avatar-status bg-danger"></span>
                                         </div>
                                     </div>
